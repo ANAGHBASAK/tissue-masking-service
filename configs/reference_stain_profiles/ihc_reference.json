@@ -1,0 +1,9 @@
+{
+  "stain_type": "IHC",
+  "stain_0_mean": 0.5,
+  "stain_0_std": 0.2,
+  "stain_1_mean": 0.4,
+  "stain_1_std": 0.15,
+  "description": "Reference IHC stain profile. Update with statistics from good quality IHC images.",
+  "note": "These are placeholder values. Generate actual reference profiles using setup_reference_profiles.py"
+}

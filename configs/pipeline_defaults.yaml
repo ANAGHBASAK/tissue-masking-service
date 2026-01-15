@@ -1,0 +1,41 @@
+# Default pipeline parameters
+
+# Optical Density settings
+od:
+  white_reference: 255.0
+  epsilon: 1.0
+  adaptive_white_reference: false
+  white_reference_percentile: 99.5
+
+# Stain estimation settings
+stain:
+  method: macenko  # 'macenko' or 'none'
+  macenko:
+    alpha: 1.0
+    beta: 0.15  # OD threshold to exclude background
+
+# Normalization settings
+normalization:
+  enabled: false
+  reference_profile_dir: "reference_stain_profiles"
+
+# Thresholding settings
+threshold:
+  method: auto  # 'otsu', 'sauvola', or 'auto'
+  sauvola:
+    window_size: 15
+    k: 0.2
+    R: 128
+
+# Morphology settings
+morphology:
+  min_area: 100  # Minimum area for connected components
+  kernel_size: 3
+  opening_iterations: 1
+  closing_iterations: 1
+
+# QC settings
+qc:
+  low_tissue_area_threshold: 0.01  # 1% of image
+  low_od_threshold: 0.1
+  saturation_threshold: 0.1  # 10% of pixels saturated
